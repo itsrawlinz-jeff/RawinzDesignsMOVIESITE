@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #222831;
+  --secondary: #393e46;
+  --white: rgb(189, 189, 189);
+  --green: rgb(37, 165, 37);
+  --orange: #ef8d32;
+  --red: #ac0d0d;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+
+
+
+header {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary);
+  text-align: center;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--white);
+  margin-right: 90px;
+}
+.search:focus {
+  outline: none;
+  outline: 3px solid rgb(85, 23, 85);
+  background-color: var(--primary);
+}
+.search::placeholder {
+  color: var(--white);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 10px;
+  background-color: var(--secondary);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.349);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.movie:hover .overview{
+  transform: translateY(0%);
+}
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px 10px;
+  letter-spacing: 0.7px;
+}
+.movie-info span {
+  background-color: var(--primary);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.movie-info span.green {
+  color: var(--green);
+}
+.movie-info span.orange {
+  color: var(--orange);
+}
+.movie-info span.red {
+  color: var(--red);
+}
+.movie-info h3{
+  font-size: .8rem;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  padding: 20px 20px 10px;
+  background-color: rgb(245, 245, 245);
+  color: var(--primary);
+  transform: translateY(100%);
+  transition: all .5s ease;
+}
+.overview h2 {
+  font-size: 1.2rem;
+  padding-bottom: 15px ;
+}
+.overview h3 {
+  font-size: 1rem;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+button{
+  background-color: var(--secondary);
+  border: none;
+  cursor: pointer;
+  padding: 10px 40px;
+  margin: 20px 10px;
+  display: block;
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+}
+button:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(75, 42, 75);;
+}
